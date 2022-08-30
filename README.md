@@ -10,7 +10,7 @@ For every resulting font, conversion to various formats are performed.
 For every font-family, a CSS stylesheet will be generated that defines all the requested fonts, by default into `./outd/fontstyles/`.
 
 Copy over the `outd/fonts` and `outd/fontstyle` directories to your wordpress instance, eg.:
-`scp -R outd/fonts outd/fontstyles serveradmin@server.com:/var/www/mywordpress/wp-content/themes/
+`scp -R outd/fonts outd/fontstyles serveradmin@server.com:/var/www/mywordpress/wp-content/themes/`
 
 For you wordpress instance, copy `gdpr.php` to your wordpress child themes folder and add  `include 'gdpr.php';` to it's `function.php`.
 For some of the wordpress default themes and some more, `gdpr.php` automatically detects if the functions loading fonts from google are enqueued and, dequeues them and loads respective stylesheets providing the originally used font definitions.
@@ -24,9 +24,9 @@ You might either add them in the `prepare.sh` script to be referenced, exclude t
 
 # References
 
-https://sicher3.de/google-fonts-checker/
-https://crunchify.com/wordpress-google-fonts-load-locally/
-https://fonts.google.com/
-https://developers.google.com/fonts/docs/getting_started
-https://bigelowandholmes.typepad.com/bigelow-holmes/2015/07/on-font-weight.html
-https://google-webfonts-helper.herokuapp.com/
+- https://sicher3.de/google-fonts-checker/
+- https://crunchify.com/wordpress-google-fonts-load-locally/
+- https://fonts.google.com/
+- https://developers.google.com/fonts/docs/getting_started
+- https://bigelowandholmes.typepad.com/bigelow-holmes/2015/07/on-font-weight.html
+- https://google-webfonts-helper.herokuapp.com/
