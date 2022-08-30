@@ -8,7 +8,7 @@ FONTHOSTDIR="../fonts"
 LOG="log.txt"
 mkdir -p "${FONTSTYLEDIR}"
 
-for fontfamily in {Noto+Sans,Noto+Serif,Inconsolata,Bitter,Open+Sans,Roboto,Lato,Source+Sans+Pro,Merriweather,Montserrat,Libre+Franklin,Raleway}; do
+for fontfamily in {Noto+Sans,Noto+Serif,Inconsolata,Bitter,Open+Sans,Roboto,Roboto+Slab,Lato,Source+Sans+Pro,Merriweather,Montserrat,Libre+Franklin,Raleway,Roboto+Slab}; do
 
 fontdir="${FONTFILEDIR}/"
 fontname=$(echo "$fontfamily" |  tr '[:upper:]' '[:lower:]' | sed 's/[^A-Za-z0-9 _\-]//g')
@@ -38,6 +38,10 @@ for fontsubset in {latin,latin-ext}; do
 	echo "fonturl=${fonturl}" >> ${LOG}
 	echo "fonturlpath=${fonturlpath}" >> ${LOG}
 	mkdir -p "${fontdir}/${fonturlpath}"
+	if [ -f "$FILE" ]; then
+		echo "info: already=${fontfile}" >> ${LOG}
+		continue;
+	fi
 	curl "${fonturl}" >> ${fontfile}
 
 	csssrcs="  src: local('')"
