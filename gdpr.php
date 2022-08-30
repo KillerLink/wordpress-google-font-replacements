@@ -27,6 +27,7 @@ function gdpr_fixup() {
         gdpr_fixup_style(array('twentyseventeen-fonts'), array($fsbase.'/opensans.css'));
         gdpr_fixup_style(array('et-divi-open-sans'), array($fsbase.'/opensans.css'));
         gdpr_fixup_style(array('hemingway-googleFonts','hemingway-block-editor-styles-font'), array($fsbase.'/lato.css',$fsbase.'/raleway.css'));
+        gdpr_fixup_style(array('colormag_google_fonts'), array($fsbase.'/opensans.css'));
 }
 add_action( 'wp_enqueue_scripts', 'gdpr_fixup', 11 );
 ?>
