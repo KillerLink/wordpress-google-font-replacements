@@ -1,3 +1,4 @@
+<?php
 //remove all queued styles from originals array and if anything is removed add replacement styles
 function gdpr_fixup_style($originals, $replacements) {
         $removed=0;
@@ -28,3 +29,4 @@ function gdpr_fixup() {
         gdpr_fixup_style(array('hemingway-googleFonts','hemingway-block-editor-styles-font'), array($fsbase.'/lato.css',$fsbase.'/raleway.css'));
 }
 add_action( 'wp_enqueue_scripts', 'gdpr_fixup', 11 );
+?>
