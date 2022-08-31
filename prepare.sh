@@ -41,7 +41,7 @@ for fontsubset in {latin,latin-ext}; do
 	echo "fonturl=${fonturl}" | tee -a ${LOG}
 	echo "fonturlpath=${fonturlpath}" | tee -a ${LOG}
 	mkdir -p "${fontdir}/${fonturlpath}"
-	if [ -f "$FILE" ]; then
+	if [ -f "${fontfile}" ]; then
 		echo "info: skipped=${fontfile}" | tee -a ${LOG}
 		continue;
 	fi
